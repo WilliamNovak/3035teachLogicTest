@@ -9,25 +9,29 @@
 <body>
     <h2>Faça uma função que receba um array composto de [ 1, 2, 3, 4, 5, 6, 6 ], você deverá retornar o segundo maior número deste array:</h2>
     <h3>Array: [ 1, 2, 3, 4, 5, 6, 6 ]</h3>
+    <div id="divSearch" style="display: flex;">
+        <button onclick="returnSecondMax()">Buscar</button>
+        <h3 style="margin:0 1rem;">Segundo maior número:</h3>
+        <p id="secondMaxP" style="margin: 0;"></p>
+    </div>
 </body>
 
 <script>
-    var arr = [1,2,3,4,5,6,6],
+
+    function returnSecondMax(){
+        var arr = [1,2,3,4,5,6,6],
         max = Math.max(...arr),
         index = arr.indexOf(max);
 
-    while(index >= 0){
-        arr.splice(index, 1);
-        index = arr.indexOf(max);
+        while(index >= 0){
+            arr.splice(index, 1);
+            index = arr.indexOf(max);
+        }
+
+        var secondMax = Math.max(...arr)
+
+        document.getElementById("secondMaxP").innerText = secondMax;
     }
-
-    var secondMax = Math.max(...arr)
-
-    var p = document.createElement("p");
-    var text = document.createTextNode("Segundo maior número: " + secondMax);
-    p.appendChild(text);
-
-    document.body.appendChild(p)
 
 </script>
 </html>
