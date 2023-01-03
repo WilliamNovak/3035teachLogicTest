@@ -1,12 +1,17 @@
+# Faça uma função que retorne apenas as vogais de uma palavra.
+
 arrVowels = ['a','A','e','E','i','I','o','O','u','U']
 s = input('Digite uma string: ')
 
-vowels = []
+def returnVowels():
+    vowels = []
 
-for x in s:
-    if x in arrVowels:
-        vowels.append(x)
+    for x in s:
+        if x in arrVowels:
+            vowels.append(x)
 
-vowelsString = ''.join(vowels)
+    vowelsString = ''.join(vowels)
 
-print(f'Vogais: {vowelsString}')
+    print(f'Vogais: {vowelsString}')
+
+returnVowels()
