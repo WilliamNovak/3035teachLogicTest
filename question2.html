@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Faça uma função que receba uma string, você deverá retornar esta string ao contrário.</h2>
+    <div id="divString" style="display: flex;">
+        <input type="text" id="stringInput" placeholder="Digite uma string:">
+        <button onclick="invertString()">Buscar</button>
+    </div>
+    <div id="divRes" style="display: flex;">
+        <h3 style="margin:0;">String ao contrário:</h3>
+        <p id="inverse" style="margin: auto 1rem;"></p>
+    </div>
+</body>
+
+<script>
+
+    function invertString(){
+        var string = document.getElementById("stringInput").value;
+
+        document.getElementById("inverse").innerText = string.split('').reverse().join('');
+    }
+
+</script>
+</html>
